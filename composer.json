@@ -1,0 +1,87 @@
+{
+	"name": "netinteractive/sentry",
+    "version": "5.0.27",
+	"description": "PHP 5.4+ Fully-featured Authentication & Authorization System",
+	"keywords": ["auth", "security", "laravel", "user"],
+	"license": "BSD-3-Clause",
+	"authors": [
+		{
+			"name": "Cartalyst LLC",
+			"email": "help@cartalyst.com"
+		},
+		{
+			"name": "Dan Syme",
+			"email": "dan.syme@cartalyst.com",
+			"role": "Creator & Designer"
+		},
+		{
+			"name": "Ben Corlett",
+			"email": "ben.corlett@cartalyst.com",
+			"role": "Developer"
+		},
+		{
+			"name": "Daniel Petrie",
+			"email": "dan.petrie@cartalyst.com",
+			"role": "Developer"
+		},
+		{
+			"name": "Bruno Gaspar",
+			"email": "bruno.gaspar@cartalyst.com",
+			"role": "Developer"
+		},
+        {
+            "name": "Piotr Pryga",
+            "email": "halfik@gmail.com",
+            "role": "Owner"
+        },
+        {
+            "name": "Michał Szapowałow",
+            "email": "smikebox@gmail.com",
+            "role": "Developer"
+        }
+	],
+	"require": {
+		"php": ">=5.3.3",
+	  	"netinteractive/elegant": ">=2.0"
+    },
+  "repositories": [
+    {
+      "type":"git",
+      "url": "ssh://git.nidev.pl/laravel/gettext"
+    },
+    {
+      "type":"git",
+      "url": "ssh://git.nidev.pl/laravel/elegant"
+    }
+  ],
+	"autoload": {
+      "classmap": [
+        "src/Netinteractive/Sentry/Role/Exceptions.php",
+        "src/Netinteractive/Sentry/Throttling/Exceptions.php",
+        "src/Netinteractive/Sentry/User/Exceptions.php",
+        "src/migrations"
+      ],
+      "psr-0": {
+        "Netinteractive\\Sentry": "src/"
+      }
+    },
+	"require-dev": {
+		"mockery/mockery": "0.9.*",
+
+		"illuminate/cookie": "~4.0|~5.0",
+		"illuminate/database": "~4.0|~5.0",
+		"illuminate/http": "~4.0|~5.0",
+		"illuminate/session": "~4.0|~5.0",
+		"ircmaxell/password-compat": "1.0.*"
+	},
+	"suggest": {
+		"illuminate/database": "Default sentry user, group and throttling implementations.",
+		"ircmaxell/password-compat": "Default hashing uses PHP 5.5 password_* functions, with forward-compatible support.",
+		"happydemon/txt": "Required Text helpers when using the Kohana implementation"
+	},
+	"extra": {
+		"component": "package",
+		"frameworks": ["Laravel 5"]
+	},
+	"minimum-stability": "stable"
+}
